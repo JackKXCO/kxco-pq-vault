@@ -1,6 +1,6 @@
 {
   "name": "kxco-pq-vault",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Post-quantum file encryption CLI and library — ML-KEM-768 + AES-256-GCM",
   "license": "Apache-2.0",
   "type": "module",
