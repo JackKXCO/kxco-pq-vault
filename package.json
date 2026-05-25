@@ -1,35 +1,7 @@
 {
   "name": "kxco-pq-vault",
-  "version": "1.0.2",
-  "description": "Post-quantum file encryption CLI and library \u00e2\u20ac\u201d ML-KEM-768 + AES-256-GCM",
-  "license": "Apache-2.0",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.js"
-  },
-  "bin": {
-    "kxco-vault": "bin/kxco-vault.js"
-  },
-  "files": [
-    "bin/",
-    "src/",
-    "README.md",
-    "LICENSE"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "@scure/base": "^1.2.4",
-    "kxco-post-quantum": "^1.1.2"
-  },
-  "scripts": {
-    "test": "node --test test/*.test.js",
-    "lint": "node --input-type=module --eval \"import('./src/cli.js')\" && echo lint ok"
-  },
-  "engines": {
-    "node": ">=20.19"
-  },
+  "version": "1.0.3",
+  "description": "Post-quantum file encryption CLI and library — ML-KEM-768 + AES-256-GCM",
   "keywords": [
     "post-quantum",
     "encryption",
@@ -40,13 +12,52 @@
     "pqc",
     "aes-gcm"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JackKXCO/kxco-pq-vault.git"
-  },
+  "license": "Apache-2.0",
+  "author": "KXCO by Knightsbridge <hello@kxco.ai>",
   "contributors": [
     { "name": "Shayne Heffernan" },
     { "name": "John Heffernan" }
   ],
-  "author": "KXCO <dev@kxco.ai>"
+  "homepage": "https://kxco.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackKXCO/kxco-pq-vault.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JackKXCO/kxco-pq-vault/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "bin": {
+    "kxco-vault": "bin/kxco-vault.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "@scure/base": "^1.2.4",
+    "kxco-post-quantum": "^1.1.2"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "lint": "node --input-type=module --eval \"import('./src/cli.js')\" && echo lint ok"
+  },
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  }
 }
