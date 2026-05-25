@@ -1,6 +1,6 @@
 {
   "name": "kxco-pq-vault",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Post-quantum file encryption CLI and library \u00e2\u20ac\u201d ML-KEM-768 + AES-256-GCM",
   "license": "Apache-2.0",
   "type": "module",
@@ -44,5 +44,9 @@
     "type": "git",
     "url": "git+https://github.com/JackKXCO/kxco-pq-vault.git"
   },
+  "contributors": [
+    { "name": "Shayne Heffernan" },
+    { "name": "John Heffernan" }
+  ],
   "author": "KXCO <dev@kxco.ai>"
 }
