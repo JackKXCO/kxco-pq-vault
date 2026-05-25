@@ -1,5 +1,10 @@
 # kxco-pq-vault
 
+[![npm](https://img.shields.io/npm/v/kxco-pq-vault?label=npm&color=b0964f)](https://www.npmjs.com/package/kxco-pq-vault)
+[![Socket](https://socket.dev/api/badge/npm/package/kxco-pq-vault)](https://socket.dev/npm/package/kxco-pq-vault)
+[![license](https://img.shields.io/badge/license-Apache--2.0-blue)](./LICENSE)
+[![node](https://img.shields.io/node/v/kxco-pq-vault.svg)](https://nodejs.org)
+
 Post-quantum file encryption CLI and library. Uses **ML-KEM-768** (NIST FIPS 203) for key encapsulation and **AES-256-GCM** for symmetric encryption.
 
 A direct answer to "harvest now, decrypt later" attacks: files encrypted today cannot be broken even by a future quantum computer.
@@ -143,6 +148,18 @@ import {
 This is a deliberate v1 choice. ML-KEM-768 is FIPS 203 final. Files encrypted here cannot be broken by a quantum computer. A hybrid adds implementation complexity without meaningful security gain over a finalized PQC standard. Hybrid support (defense-in-depth for non-PQ-capable recipients) is planned for v0.2.0.
 
 ---
+
+## Security
+
+Key encapsulation uses [Noble post-quantum](https://github.com/paulmillr/noble-post-quantum) ML-KEM-768 (NIST FIPS 203). Symmetric encryption uses AES-256-GCM. The full envelope header is bound as GCM additional authenticated data, so any modification to the algorithm line, recipient entries, or nonce causes authentication failure before any plaintext is released.
+
+To report a vulnerability, open a [private security advisory](https://github.com/JackKXCO/kxco-pq-vault/security/advisories/new) or email **security@kxco.ai**.
+
+## Funding
+
+Maintained by **Shayne Heffernan** and **John Heffernan** at [KXCO by Knightsbridge](https://kxco.ai).
+
+[Knightsbridge Law](https://knightsbridge.law) · [target150.com](https://target150.com) · [livetradingnews.com](https://livetradingnews.com)
 
 ## License
 
